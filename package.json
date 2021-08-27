@@ -1,0 +1,39 @@
+{
+  "name": "astarix",
+  "description": "Web App for spreading `SELECT * FROM table`",
+  "version": "0.1.0",
+  "author": "progfay",
+  "dependencies": {
+    "gatsby": "3.12.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.29.3",
+    "@typescript-eslint/parser": "4.29.3",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.3.2",
+    "typescript": "4.4.2"
+  },
+  "homepage": "https://github.com/progfay/astarix#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progfay/astarix.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "lint": "run-p lint:*",
+    "lint:tsc": "tsc --noEmit -p ./tsconfig.json",
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint -c ./.eslintrc.js .",
+    "format": "run-p format:*",
+    "format:prettier": "prettier --write .",
+    "format:eslint": "eslint --fix -c ./.eslintrc.js ."
+  }
+}
