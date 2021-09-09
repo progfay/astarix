@@ -3,13 +3,17 @@ import type { Props as ContainerProps } from ".";
 import { CopyButton } from "../CopyButton";
 
 export interface Props extends ContainerProps {
+  readonly inputRef: React.RefObject<HTMLInputElement>;
   readonly text: string;
 }
 
-export const Presentation: React.VFC<Props> = ({ table, text }) => (
+export const Presentation: React.VFC<Props> = ({ table, inputRef, text }) => (
   <li>
     <h2>
-      <code>{table.tableName}</code>
+      <code>
+        SELECT * FROM <span style={{ color: "red" }}>{table.tableName}</span> AS{" "}
+        <input ref={inputRef} />
+      </code>
     </h2>
     <pre>
       <code>{text}</code>
